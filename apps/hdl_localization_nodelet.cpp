@@ -94,6 +94,10 @@ private:
     // initialize pose estimator
     if(private_nh.param<bool>("specify_init_pose", true)) {
       NODELET_INFO("initialize pose estimator with specified parameters!!");
+
+	  //TODO wait
+		
+
       pose_estimator.reset(new hdl_localization::PoseEstimator(registration,
         ros::Time::now(),
         Eigen::Vector3f(private_nh.param<double>("init_pos_x", 0.0), private_nh.param<double>("init_pos_y", 0.0), private_nh.param<double>("init_pos_z", 0.0)),
